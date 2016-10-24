@@ -29,7 +29,7 @@
 
 (function( $ ) {
 
-  this.breaks = new Object();
+  this.breaks = {};
 
   // A global function to add more breakpoints to the break object. This will also update any previous
   // breaks that exist in the break object.
@@ -57,14 +57,14 @@
         breaks[breakpointName] = breakpointValue;
       });
     }
-  }
+  };
 
 
   // If the custom properties and extension file are loaded
   // add all breakpoitns defined in the sass/css into the public/global breaks object.
-  // if (CustomProps !== undefined && $.customproperty !== undefined) {
-  //   addBreakpoint($.customproperty());
-  // }
+  if (CustomProps !== undefined && $.customproperty !== undefined) {
+    addBreakpoint($.customproperty());
+  }
 
   // Breakpoint check
   this.breakpoint = function() {
@@ -79,7 +79,7 @@
     // Check settings
     $.each(settings, function(i, value){
       // First argument should always be a number, or break reference
-      if ( i == 0 ) {
+      if ( i === 0 ) {
         if (typeof(value) === 'number' ) {
           size = value;
         } else if (typeof(value) === 'string' ) {
@@ -94,13 +94,15 @@
       }
     });
 
+    var breakBool;
+
     // Check is the selector or window width should be comparaed to the given size.
     // Create breakBool variable.
     if ( selector !== undefined && selector !== null ) {
-      var breakBool = size >= $(selector).innerWidth();
+      breakBool = size >= $(selector).innerWidth();
     } else {
       // Checks the viewport width including scroller bar width - http://www.w3schools.com/js/js_window.asp
-      var breakBool = size >= (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
+      breakBool = size >= (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
     }
 
     if ( func !== null && breakBool) {
@@ -111,13 +113,13 @@
       return breakBool;
     }
 
-  }
+  };
 
   // Incase a selector isn't used
   $.breakpoint = function() {
     var settings = Array.prototype.slice.call(arguments);
     return breakpoint.apply(null, settings);
-  }
+  };
 
   $.fn.breakpoint = function() {
     // Put all arguments into an array
@@ -130,7 +132,7 @@
     settings.push(selector);
 
     return breakpoint.apply(null, settings);
-  }
+  };
 
 
 }( jQuery ));
