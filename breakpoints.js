@@ -33,7 +33,7 @@
 
   // If the custom properties and extension file are loaded
   // add all breakpoitns defined in the sass/css into the public/global breaks object.
-  if (CustomProps !== undefined && $.customproperty !== undefined) {
+  if (typeof CustomProps !== undefined && $.customproperty !== undefined) {
     addBreakpoint($.customproperty());
   }
 
