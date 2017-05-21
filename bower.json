@@ -1,16 +1,16 @@
 {
-  "name": "breakpoints-mop",
+  "name": "breakpoint-checker",
   "ignore": [],
-  "homepage": "https://github.com/marknotton/breakpoints",
+  "homepage": "https://github.com/marknotton/breakpoint-checker",
   "author": {
     "name": "Mark Notton",
     "url": "http://www.marknotton.uk"
   },
-  "description": "Use custom props to use existing SASS breakpoint variables",
+  "description": "Query window viewport or element widths with specific breakpoints",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marknotton/breakpoints"
+    "url": "https://github.com/marknotton/breakpoint-checker"
   },
   "version": "1.0.1",
   "_release": "1.0.1",
@@ -19,7 +19,7 @@
     "tag": "1.0.1",
     "commit": ""
   },
-  "_source": "git://github.com/marknotton/breakpoints.git",
+  "_source": "git://github.com/marknotton/breakpoint-checker.git",
   "_target": "^1.0.0",
   "_originalSource": "marknotton"
 }

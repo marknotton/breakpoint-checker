@@ -1,0 +1,9 @@
+{
+  "name": "breakpoint-checker",
+  "version": "1.0.0",
+  "description": "Query window viewport or element widths with specific breakpoints",
+  "main": "breakpoint-checker.js",
+  "repository": "https://www.npmjs.com/package/breakpoint-checker",
+  "author": "Mark Notton <mark@marknotton.uk>",
+  "license": "MIT"
+}

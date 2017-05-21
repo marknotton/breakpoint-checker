@@ -1,11 +1,22 @@
-# breakpoints
+# Breakpoint Checker
 
-Sets a 'breaks' object with a name and value.
+Query window viewport or element widths with specific breakpoints
 
 ## Installation
 
+### [NPM](https://www.npmjs.com/package/breakpoint-checker)
 ```
-bower install breakpoints-mop --save
+npm i breakpoint-checker
+```
+
+### [Yarn](https://yarnpkg.com/en/package/breakpoint-checker)
+```
+yarn add breakpoint-checker
+```
+
+### Bower
+```
+bower install breakpoint-checker --save
 ```
 
 ## Usage
